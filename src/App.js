@@ -22,17 +22,35 @@ import { SafeAreaView } from "react-native-safe-area-context"
 // import ListaProdutoV2 from "./componentes/produto/ListaProduto"
 // import Quadrado from "./componentes/layout/Quadrado"
 // import FlexboxV1 from "./componentes/layout/FlexboxV1"
-import FlexboxV3 from "./componentes/layout/FlexboxV3"
+// import FlexboxV4 from "./componentes/layout/FlexboxV4"
+// import Mega from "./componentes/mega/Mega"
+import AppFilmes from "./componentes/filme/AppFilmes"
+import AppFilme2 from "./componentes/filme/AppFilmes2"
+
 
 const Stack = createNativeStackNavigator()
 
 
 export default () => (
-    <SafeAreaView style={styles.TelaIniciante}>
-       <FlexboxV3/>
-         {/* <ListaProdutoV2/> */}
-        {/* <ListaProduto/> */}
-        {/* <Familia>
+    // <SafeAreaView style={styles.TelaIniciante}>
+     //  <AppFilmes/>
+
+     <NavigationContainer>
+     <Stack.Navigator>
+     <Stack.Screen name="AppFilmes" component={AppFilmes}/>
+     <Stack.Screen name="AppFilmes2" component={AppFilme2}/>
+     </Stack.Navigator>
+     </NavigationContainer>
+
+
+    //     <Stack.Screen name="Menu" component={AppFilmes2}/> 
+    //      <AppFilmes2/> 
+    //  <AppFilmes/>
+    /* <Mega qtdeNumeros={7}/> */
+       /* <FlexboxV4/> */
+         /* <ListaProdutoV2/> */
+        /* <ListaProduto/> */
+        /* <Familia>
         <Membro nome="Jorge" sobrenome="Pereiras"/>
         <Membro nome="Edinaldo" sobrenome="Pereiras"/>
         <Membro nome="Marcinho" sobrenome="Pereiras"/>
@@ -44,8 +62,8 @@ export default () => (
         <Membro nome="Jorge" sobrenome="Da Silva"/>
         <Membro nome="Marcia" sobrenome="Da Silva"/>
         
-    </Familia> */}
-    </SafeAreaView>
+    </Familia> */
+    // </SafeAreaView>
    
 
     // <NavigationContainer>
